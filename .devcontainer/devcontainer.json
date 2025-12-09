@@ -1,0 +1,40 @@
+// This file is cloned from https://github.com/espressif/esp-idf/tree/master/tools/docker
+{
+	"name": "bico_esp-idf_container",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"IDF_CLONE_BRANCH_OR_TAG": "v5.4.1"
+		},
+		"options": [
+			"--tag", "esp_idf:v5.4.1"
+		]
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"idf.espIdfPath": "/opt/esp/idf",
+				"idf.toolsPath": "/opt/esp",
+				"idf.gitPath": "/usr/bin/git"
+			},
+			"extensions": [
+				"espressif.esp-idf-extension",
+				"espressif.esp-idf-web"
+			]
+		}
+	},
+	// Container runtime configuration
+	"runArgs": [
+		"--name", "bico_esp-idf_container",
+		"--privileged",
+		// "--network", "host",
+	],
+	"mounts": [
+		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+	],
+	// Add DISPLAY environment variable
+	"containerEnv": {
+		"DISPLAY": "${localEnv:DISPLAY}"
+	},
+}
