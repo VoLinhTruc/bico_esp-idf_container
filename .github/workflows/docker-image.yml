@@ -34,4 +34,4 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: ghcr.io/volinhtruc/bico_esp-idf_container:1.0.0
+        tags: ghcr.io/volinhtruc/bico_esp-idf_container:idf_release_v5.5
