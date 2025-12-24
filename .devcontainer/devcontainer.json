@@ -2,13 +2,7 @@
 {
 	"name": "bico_esp-idf_container",
 	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			"IDF_CLONE_BRANCH_OR_TAG": "v5.4.1"
-		},
-		"options": [
-			"--tag", "esp_idf:v5.4.1"
-		]
+		"dockerfile": "Dockerfile"
 	},
 	"customizations": {
 		"vscode": {
