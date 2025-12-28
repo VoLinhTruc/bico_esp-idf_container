@@ -11,6 +11,7 @@
 				"idf.espIdfPath": "/opt/esp/idf",
 				"idf.toolsPath": "/opt/esp",
 				"idf.gitPath": "/usr/bin/git",
+				
 				"idf.flashPartitionToUse": "app",
 				"idf.flashType": "UART",
 				"idf.monitorPort": "/dev/ttyACM0",
@@ -18,11 +19,13 @@
 				"idf.monitorBaudRate": "115200",
 				"idf.flashBaudRate": "921600",
 				"idf.pythonInstallPath": "/usr/bin/python",
+				"idf.adapterTargetName": "esp32c3",
 				"idf.openOcdConfigs": [
-					"interface/ftdi/esp32_devkitj_v1.cfg",
-					"board/esp32-wrover.cfg",
+					"interface/esp_usb_jtag.cfg",
 					"board/esp32c3-builtin.cfg"
 				],
+				"idf.launchMonitorOnDebugSession": true,
+				"idf.monitorNoReset": true,
 			},
 			"extensions": [
 				"espressif.esp-idf-extension",
